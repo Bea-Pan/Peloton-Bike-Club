@@ -1,0 +1,441 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template: repeat(24, 2.5rem) / repeat(12, 1fr);
+    background-image: url(images/bike-background.jpg);
+    background-position-y: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    grid-area: 1/1/3/13;
+    background-color: black; 
+    opacity: 0.9;
+    display: grid;    
+}
+
+#logo {
+    grid-area: 1/1/3/2;
+    width:100px;
+    height: auto;
+}
+
+
+.navbar {
+    grid-area: 1/8/3/13;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: #275086;
+    
+}
+
+.navbar a:hover {
+    background-color: #fffae6;
+    border-radius: 35%;
+    padding: 10px;
+    box-shadow: 0 0 30px #fff0b3;
+    box-shadow: 0 0 30px #fff0b3;      
+}
+
+/* MOBILE */
+@media only screen and (max-width:700px){
+
+    .grid-mobile {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template: repeat(40, 2.5rem) / repeat(13, 1fr);
+        background-image: url(./images/tablet-background-cut.jpg);
+        background-position-y: center; 
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+        } 
+
+    header {
+            display: none;
+        }
+
+    .header-mobile-logo{
+        grid-area: 1/1/6/14;
+        background-color:#275086;
+        display: grid;
+    }
+
+    #logo-mobile {
+        grid-area: 1/5/6/9; 
+        width:200px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        height: auto; 
+    }
+
+    .navbar-mobile{
+        grid-area: 6/1/10/14;
+        background-color: black;
+        opacity: 0.9;
+        display: grid;
+        grid-template-rows: 2.5rem; 
+        grid-template-columns: 1fr;
+        justify-content: start;
+        align-items: center
+    }
+
+    .navbar-mobile a {
+        font-weight: 800;
+    }
+
+    .button-navbar {
+        background-color: black;
+        border-bottom: 1px solid #275086;
+        padding: 0.625rem;
+    }
+
+    #button-about {
+        border-top:1px solid #275086;
+        border-bottom:3px solid #275086;
+    }
+
+    .button-navbar:active {
+        background-color:#275086;
+    }
+
+
+    .navbar-mobile a {
+        text-decoration: none; 
+        color:#ffd966;
+        padding-left: 0.75rem;
+        width: 100%;
+    }
+
+    #logo {
+        display: none;
+    }
+    
+    #logo-tablet {
+        display: none;
+    }
+}
+
+/* TABLET */
+
+@media only screen and (max-width:1024px) and (min-width: 700px) {
+    
+    .grid-tablet {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template: repeat(40, 2.5rem) / repeat(12, 1fr);
+    background-image: url(./images/tablet-background-cut.jpg);
+    background-position-y: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    } 
+
+    .header-mobile {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: none;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #logo-tablet {
+        grid-area: 1/1/3/2;
+        width:75px;
+        height: auto;
+    }
+
+    #logo-mobile{
+        display: none;
+    }
+}
+
+/* LAPTOP */
+
+@media screen and (min-width: 1024px) {
+    .header-mobile {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: none;
+    }
+    
+    #logo-tablet {
+        display: none;
+    }
+
+    #logo-mobile{
+        display: none;
+    }
+}
+
+/*ABOUT*/
+.box {
+    background-color: #ffd966;
+    color:#275086;
+    padding: 10px;
+    box-shadow: 0 0 30px  #fff0b3;
+    box-shadow: 0 0 30px  #fff0b3;
+    display: grid;
+    align-content: center;
+}
+
+
+.about {
+    grid-area: 4/ 1/ span 3/ span 6;
+    margin-left: 2rem;
+}
+
+.photos-about {
+    display: flex;
+    justify-content: space-between;
+    grid-area: 8/1/span 6/ span 13;
+}
+
+.photos-about img {
+    width: 31%;
+    height: auto;
+    margin: 0.75rem;
+    border-radius: 5%;
+    object-fit: cover;
+    box-shadow: 0 0 30px #fff0b3;
+    box-shadow: 0 0 30px #fff0b3;
+}
+
+.rides {
+    grid-area: 15/4/span 3/ span 6;
+} 
+
+.photos-rides {
+    display: flex;
+    justify-content:start;
+    grid-area: 19/1/span 7/ span 7;
+}
+
+.photos-rides img {
+    width: 40%;
+    margin-left: 5%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 30px #fff0b3;
+    box-shadow: 0 0 30px #fff0b3;
+    margin-bottom: 2rem;
+}
+
+.meet-up {
+    grid-area: 19/8/span 5/span 5;
+    margin-right: 2rem;  
+}
+
+.quote {
+    grid-area: 25/8/span 1/ span 5;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: #275086;
+    color:#ffd966;
+    padding: 1rem;
+    background: rgba(39, 80, 134, 0.8);
+    border-radius: 3%;
+    box-shadow: 0 0 30px #275086;
+    box-shadow: 0 0 30px #275086;
+    display: grid;
+    align-content: center;
+}
+
+.quote-style {
+    font-size: 1.3rem;
+    font-family: 'Indie Flower', cursive;
+    padding: 0.7rem;
+}
+
+/* MOBILE */
+@media only screen and (max-width:700px){
+  
+    .box {
+        background-color:#275086 ;
+        color:#ffd966;
+        border:none;
+        box-shadow: 0 0 30px  #ff6666;
+        box-shadow: 0 0 30px  #ff6666; 
+    }
+
+    .about {
+        margin-top: 0.3rem;
+        grid-area: 11/1/span 5/ 14;
+        margin-left: 0;
+    }
+    .photos-about {
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        grid-area: 16/1/span 6/ span 13;
+    }
+
+    .photos-about img {
+        width:90%;
+        margin-top: 1rem;
+        box-shadow: 0 0 30px #275086; 
+        box-shadow: 0 0 30px #275086; 
+    }
+
+    #photos-about-two {
+        display: none;
+    }
+
+    #photos-about-three {
+        display: none;
+    }
+
+    .rides {
+        grid-area: 22/1/span 4/ span 14;
+    } 
+
+    .photos-rides {
+        display: flex;
+        justify-content:space-evenly;
+        grid-area: 27/ 1/ span 7/ span 14;
+    }
+
+    .photos-rides img {
+        margin-left: 0;
+        box-shadow: 0 0 30px #275086; 
+        box-shadow: 0 0 30px #275086; 
+    }
+
+    .meet-up {
+        grid-area: 34/1/span 6/ 14;
+        margin-right: 0;
+        
+    }
+
+    .quote {
+        grid-area: 41/1/span 7/ 14;
+        margin-right: 0;
+    }
+}
+
+/* TABLET */
+
+@media only screen and (max-width:1024px) and (min-width: 700px) {
+
+    .box {
+        background-color:#275086;
+        color:#ffd966;
+        box-shadow: 0 0 30px  #ff6666;
+        box-shadow: 0 0 30px  #ff6666; 
+    }
+    .about {
+        margin-left:auto;
+        grid-area: 4/2/span 3/ span 10;
+    }
+
+    .photos-about img {
+        box-shadow: 0 0 30px #275086; 
+        box-shadow: 0 0 30px #275086; 
+        margin: 0.5rem;
+        justify-content: space-evenly;
+    }
+
+    .rides {
+        grid-column: 2/ span 10;
+        
+    }  
+
+    .photos-rides img {
+        box-shadow: 0 0 30px #275086; 
+        box-shadow: 0 0 30px #275086; 
+    }
+
+    .meet-up {
+        grid-row-end: span 7;
+    
+    }
+
+    .quote {
+        grid-row: 27/ span 14;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content:space-evenly; 
+    }
+
+    .photos-rides {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .photos-rides img {
+        min-width: 270px;
+        max-width: 400px;
+    }
+
+}
+
+/* LAPTOP */
+
+@media screen and (min-width: 1024px) {
+  
+}
+
+/* FOOTER */
+
+footer {
+    grid-area: 27/ 1/ 30/ 13;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: black;
+    opacity: 0.8;
+    
+}
+footer span {
+    font-size: 0.75rem;
+    color:#ffd966;
+}
+
+/* MOBILE */
+@media only screen and (max-width:700px){
+    footer {
+        grid-area: 49/1/ span 2/ 14;
+    }
+}
+
+/* TABLET */
+
+@media only screen and (max-width:1024px) and (min-width: 700px) {
+    footer {
+        grid-row: 41/43;
+    }
+}
+
+/* LAPTOP */
+
+@media screen and (min-width: 1024px) {
+  
+}

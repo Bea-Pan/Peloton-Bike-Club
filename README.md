@@ -26,4 +26,4 @@ To achieve goals & objectives I used the follwing:
 
 ## Live Website
 
-Live Peloton Bike Club is available [here](https://bea-pan.github.io/Peloton-Bike-Club/index.html)
+Live Peloton Bike Club website is available [here](https://bea-pan.github.io/Peloton-Bike-Club/index.html)

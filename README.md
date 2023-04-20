@@ -21,9 +21,8 @@ To achieve goals & objectives I used the follwing:
 ## Technologies used
 * HTML
 * CSS
-* Git and GitHub
-* Command terminal
+* Git, GitHub and Git bash
 
 ## Live Website
 
-Live Peloton Bike Club website is available [here](https://bea-pan.github.io/Peloton-Bike-Club/index.html)
+Peloton Bike Club website can be viewed [here](https://bea-pan.github.io/Peloton-Bike-Club/index.html)

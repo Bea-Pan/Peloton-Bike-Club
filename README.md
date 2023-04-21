@@ -25,4 +25,4 @@ To achieve goals & objectives I used the follwing:
 
 ## Live Website
 
-Peloton Bike Club website can be viewed [here](https://bea-pan.github.io/Tea-Cozy/)
+Peloton Bike Club website can be viewed [here](https://bea-pan.github.io/Peloton-Bike-Club/index.html)
